@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     date: "02.10.2021",
     img: false,
   };
+
   let block = document.getElementById("1");
   for (let i = 0; i < 6; i++) {
     let div = document.createElement("div");
@@ -75,7 +76,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
         img.classList = "img";
         dargSrcEl.appendChild(img);
         img.src = "./images/user.jpg";
-        console.log(divBlock);
+        console.log(divv);
       }
     }
     return false;
@@ -83,7 +84,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
   function handleDragEnd(e) {
     this.style.opacity = "1";
-    this.style.transition = "0.3s cubic-bezier(0.2, 1, 0.1, 1)";
+    this.style.transition = ".5s cubic-bezier(0.2, 1, 0.1, 1)";
     items.forEach((item) => {
       item.classList.remove("over");
     });
@@ -100,10 +101,3 @@ document.addEventListener("DOMContentLoaded", (e) => {
     });
   });
 });
-
-const url = "https://reqres.in/api/users?page=1";
-fetch(url)
-  .then((res) => res.json())
-  .then((data) => {
-    console.log(data.data[1]);
-  });

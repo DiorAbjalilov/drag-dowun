@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
         img.classList = "img";
         dargSrcEl.appendChild(img);
         img.src = "./images/user.jpg";
-        console.log(divv);
+        // console.log(divv);
       }
     }
     return false;

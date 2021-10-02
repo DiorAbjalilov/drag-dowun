@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
   let objDiv = {
     text: "Select mouse drag dowun",
+    title: "Samarkand",
+    date: "02.10.2021",
     img: false,
   };
   let block = document.getElementById("1");
@@ -21,7 +23,13 @@ document.addEventListener("DOMContentLoaded", (e) => {
     let div = document.createElement("div");
     div.draggable = "true";
     div.classList = "btnL box";
-    div.innerText = objDiv.text;
+    div.innerHTML = `
+      <nav>
+      ${objDiv.text} 
+      <p>${objDiv.title}</p>
+      <span>${objDiv.date}</span>
+      </nav>
+    `;
     block.appendChild(div);
   }
   let dargSrcEl = null;
@@ -51,7 +59,13 @@ document.addEventListener("DOMContentLoaded", (e) => {
         for (let i = 0; i < divv.length; i++) {
           divv[0].appendChild(dargSrcEl);
         }
-        dargSrcEl.innerText = objDiv.text;
+        dargSrcEl.innerHTML = `
+      <nav>
+      ${objDiv.text} 
+      <p>${objDiv.title}</p>
+      <span>${objDiv.date}</span>
+      </nav>
+    `;
       }
       if (e.target.id == 2) {
         this.style.opacity = "1";

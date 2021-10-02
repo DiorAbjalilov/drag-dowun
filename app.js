@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", (e) => {
+  // html structorasi
   let body = document.querySelector("body");
   let section = document.createElement("section");
   section.innerHTML = `
@@ -11,14 +12,14 @@ document.addEventListener("DOMContentLoaded", (e) => {
   `;
   section.classList = "body";
   body.appendChild(section);
-
+  // object malumotlar
   let objDiv = {
     text: "Select mouse drag dowun",
     title: "Samarkand",
     date: "02.10.2021",
     img: false,
   };
-
+  // malumotlarni listga joylash
   let block = document.getElementById("1");
   for (let i = 0; i < 6; i++) {
     let div = document.createElement("div");
@@ -33,6 +34,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
     `;
     block.appendChild(div);
   }
+
+  // data transfer
+
   let dargSrcEl = null;
   let divv = document.querySelectorAll(".div");
   function handleDragStart(e) {

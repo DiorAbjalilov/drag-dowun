@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.body {
+  position: relative;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 50px auto;
+  padding: 10px;
+  border: 1px solid black;
+  width: 70%;
+  height: 80vh;
+}
+.box {
+  position: relative;
+  display: flex;
+  color: white;
+  height: auto;
+  padding: 10px;
+  margin-bottom: 15px;
+  align-items: center;
+  justify-content: space-between;
+}
+.box .img {
+  width: 65px;
+}
+.btnL {
+  background-color: crimson;
+}
+.btnR {
+  background-color: tomato;
+}
+[draggable] {
+  user-select: none;
+}
+.body > div {
+  border: 1px solid red;
+  padding: 10px;
+}
+.btnX {
+  position: relative;
+  padding: 2px 4px;
+}

@@ -1,4 +1,17 @@
 document.addEventListener("DOMContentLoaded", (e) => {
+  let body = document.querySelector("body");
+  let section = document.createElement("section");
+  section.innerHTML = `
+     <div id="1" class="div">
+        <h3>List All</h3>
+      </div>
+      <div id="2" class="div">
+        <h3>My List</h3>
+      </div>
+  `;
+  section.classList = "body";
+  body.appendChild(section);
+
   let objDiv = {
     text: "Select mouse drag dowun",
     img: false,
@@ -38,6 +51,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
         for (let i = 0; i < divv.length; i++) {
           divv[0].appendChild(dargSrcEl);
         }
+        dargSrcEl.innerText = objDiv.text;
       }
       if (e.target.id == 2) {
         this.style.opacity = "1";
